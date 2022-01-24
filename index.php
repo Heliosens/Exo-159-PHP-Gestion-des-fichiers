@@ -27,10 +27,9 @@ echo "<br><br>";
  * --> N'oubliez pas de fermer votre fichier.
  */
 // TODO Votre code ici.
-$text = fopen('lire.txt', 'r+');
+$text = fopen('lire.txt', 'r');
 while ($char = fgetc($text)){
-    if($char !== " " && $char !== "." && $char !== "?" && $char !== "!")
-    echo $char;
+    echo $char !== " " && $char !== "." && $char !== "?" && $char !== "!" ? $char : null;
 }
 fclose($text);
 /**
